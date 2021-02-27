@@ -40,6 +40,10 @@ version = "0.5.0"
 features = ["ram_access_1x16"]
 optional = true
 
+[dependencies.bme280]
+optional = true
+version = "0.2.1"
+
 [dev-dependencies]
 panic-halt = "0.2.0"
 panic-semihosting = "0.5.2"
@@ -146,3 +150,7 @@ required-features = ["has-can"]
 [[example]]
 name = "can-rtic"
 required-features = ["has-can", "rt"]
+
+[[example]]
+name = "i2c-bme280"
+required-features = ["bme280", "rt"]
